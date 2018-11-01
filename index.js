@@ -1,5 +1,6 @@
 const commando = require('discord.js-commando');
 const bot = new commando.Client();
+const token = require('token.txt');
 
 bot.registry
   .registerGroup('general', 'General')
@@ -12,4 +13,4 @@ bot.registry
 //   }
 // });
 
-bot.login('NDk5MTk2MDUyNDE1NTc4MTQy.Dp4xJA.hHlpMcfwqc8QOxTdZf2pLn-8EFI');
+bot.login(token.readFileSync('DATA', 'utf8'));
